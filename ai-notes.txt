@@ -1,0 +1,16 @@
+
+
+Python & ML
+AI Tools 
+AI Agents
+Github Copilot
+Microsoft copilot studio
+
+
+n8n workflow automation
+https://n8n.io/workflows/
+https://n8n.io/workflows/1748-pulling-data-from-services-that-n8n-doesnt-have-a-pre-built-integration-for/
+
+
+
+
