@@ -18,7 +18,9 @@ github codespaces
 ---
 
 ## Introduction
-Prompt engineering is the art and science of crafting inputs (prompts) to guide AI models toward desired outputs. It is essential for maximizing the effectiveness of large language models (LLMs).
+- Prompt engineering is the art and science of crafting inputs (prompts) to guide AI models toward desired outputs.  
+- It is essential for maximizing the effectiveness of large language models (LLMs).
+- Prompt is detailed set of guidelines given to an LLM to do a task
 
 ---
 
@@ -26,6 +28,7 @@ Prompt engineering is the art and science of crafting inputs (prompts) to guide 
 - LLMs are sensitive to prompt phrasing
 - Good prompts yield more accurate and relevant results
 - Enables control over model behavior
+- PE is an iterative process
 
 ---
 
@@ -39,10 +42,17 @@ Prompt engineering is the art and science of crafting inputs (prompts) to guide 
 
 ## Best Practices
 - Be explicit and clear
+- Define the goal. What exact you want
 - Provide context and examples
-- Use system and user roles
+- Use system and user roles. Create role or persona
 - Test and iterate
 - Limit ambiguity
+- Carify who the audience is. Like beginner, experience, 10 year old boy etc. Audience Persona
+- Detail output format
+- Specify style or tone
+- Apply restrictions and boundaries. Exclude , avoid, don't consider, focus only on  etc.
+- Use templates with placeholders for content
+
 
 ---
 
@@ -106,14 +116,56 @@ User: Explain the Pythagorean theorem.
 
 ---
 
-## FAQ
-**Q: How do I know if my prompt is good?**
-A: Test with multiple inputs and refine based on results.
+## Prompt Parameters
+1. Temperature : Lower for creativity and deterministic results; Higher for diversity and factual QA (range : 0-1)
+2. Top P : Control model determinism; Low for factual, high for diverse
+3. Max Length : Manage response length
 
-**Q: Can I automate prompt generation?**
-A: Yes, with prompt templates and chaining tools.
+## Action Verbs
+- Generate, Give, Analyze, Format
+- Write, Re-write, Rephrase
 
-**Q: What is prompt injection?**
-A: When a user manipulates the prompt to change model behavior; sanitize inputs to prevent this.
+## Prompt Components with Order 
+1. Persona
+2. Context
+3. Task
+4. Format
+5. Exemplar / Example
+6. Tone
 
----
+## Persona or Role Exmaples 
+1. You are a 
+    - `experienced therapist`
+    - `ecommerce expert`
+    - `professional lawyer`
+    - `experienced dentist`
+    - `english mentor`
+    - `NoSql database expert`
+    - `experienced backend technical interviewer`
+2. Act as global tourist guide. Give me directions to go to india to australia
+3. You are a yoga or gym instructor
+
+## Common ouput formats
+- Bullet Points, Tabular, Email, Lists
+- Code blocks, paragraph, markdown, graph
+
+## Tone verbs
+- Motivate
+- Inform
+- Suggest
+- Compare
+- Confidence
+- Clarify
+- Justify
+- Clasify
+
+## Application of Prompt Engineering
+- Content generation
+- Customer support and engagement
+- Data analysis and science
+- Code generation and debugging
+- Research and summarization
+- Sentiment analysis
+- Translation and localization
+
+
