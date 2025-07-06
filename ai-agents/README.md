@@ -1,7 +1,9 @@
 # ai-agents
 
 ## What are AI Agents?
-AI agents are autonomous entities that perceive their environment, reason about it, and take actions to achieve specific goals. They can range from simple rule-based bots to advanced, learning-enabled systems that adapt over time.
+- AI agent that uses Artificial Intelligence to make decisions and take actions on it's own.
+- AI agents are autonomous entities that perceive their environment, reason about it, and take actions to achieve specific goals.
+- They can range from simple rule-based bots to advanced, learning-enabled systems that adapt over time.
 
 ---
 
@@ -16,11 +18,6 @@ AI agents are autonomous entities that perceive their environment, reason about 
 8. [Best Practices](#best-practices)
 9. [Challenges](#challenges)
 10. [Further Reading](#further-reading)
-
----
-
-## Introduction
-An AI agent is a system that can perceive its environment through sensors and act upon that environment through actuators. The agent uses a policy (a mapping from perceived states to actions) to decide what to do next.
 
 ---
 
@@ -47,6 +44,14 @@ An AI agent is a system that can perceive its environment through sensors and ac
 - **Policy:** The strategy used by the agent to determine actions.
 - **Reward/Utility:** Feedback used to evaluate actions.
 - **Learning:** Adapting behavior based on experience.
+
+
+## An AI Agent is a system that:
+- Perceives (takes input from the world),
+- Thinks (decides what to do using AI),
+- Acts (takes some action),
+- Learns (improves over time – sometimes).
+
 
 ---
 
