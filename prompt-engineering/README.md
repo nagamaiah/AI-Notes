@@ -58,7 +58,8 @@ github codespaces
 
 ## Few-Shot and Zero-Shot Learning
 - **Zero-shot:** No examples, just instructions
-- **Few-shot:** Provide 1-5 examples to guide the model
+- **One-shot:** One example included in the prompt
+- **Few-shot:** Provide 1 or more examples to guide the model
 
 ### Example
 ```
@@ -74,6 +75,7 @@ French:
 ## Prompt Chaining
 - Break complex tasks into multiple steps
 - Chain outputs from one prompt as input to the next
+- Use chain-of-thought for complex reasoning tasks
 
 ---
 

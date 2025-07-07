@@ -1,5 +1,10 @@
 # ai-agents
 
+## AI Workflows
+- Traditional AI workflows involve data collection, preprocessing, model training, evaluation, and deployment.
+- They only follow pre-defined control logic and dependent on manual intervention.
+- To overcome the limitations of traditional workflows, AI agents can automate many of these steps, allowing for more dynamic and adaptive systems.
+
 ## What are AI Agents?
 - AI agent that uses Artificial Intelligence to make decisions and take actions on it's own.
 - AI agents are autonomous entities that perceive their environment, reason about it, and take actions to achieve specific goals.
@@ -41,10 +46,17 @@
 ## Key Concepts
 - **Perception:** Gathering information from the environment.
 - **Action:** Executing operations that affect the environment.
-- **Policy:** The strategy used by the agent to determine actions.
+- **Reasoning / Decision :** The strategy used by the agent to determine actions.
 - **Reward/Utility:** Feedback used to evaluate actions.
 - **Learning:** Adapting behavior based on experience.
 
+
+## RAG (Retrieval-Augmented Generation)
+- RAG is process that helps AI models "look things up" before they answer. RAG is type of AI Workflow.
+- RAG combines retrieval and generation to enhance the capabilities of AI agents.
+- It retrieves relevant information from a knowledge base and uses it to generate responses.
+- This approach is particularly useful for tasks like question answering and summarization.
+- It allows agents to leverage large datasets without needing to store all information in the model itself.
 
 ## An AI Agent is a system that:
 - Perceives (takes input from the world),

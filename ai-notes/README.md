@@ -1,17 +1,7 @@
-n8n workflow automation
-# ai-notes
+# AI Tools and Notes
 
 ---
 
-## Table of Contents
-1. [Python & Machine Learning](#python--machine-learning)
-2. [AI Tools](#ai-tools)
-3. [AI Agents](#ai-agents)
-4. [Github Copilot & Microsoft Copilot Studio](#github-copilot--microsoft-copilot-studio)
-5. [n8n Workflow Automation](#n8n-workflow-automation)
-6. [Further Reading](#further-reading)
-
----
 
 ## Python & Machine Learning
 Python is the most popular language for AI and ML due to its simplicity and rich ecosystem.
@@ -23,15 +13,6 @@ Python is the most popular language for AI and ML due to its simplicity and rich
 - **TensorFlow & PyTorch:** Deep learning frameworks
 - **matplotlib & seaborn:** Data visualization
 
-### Example: Linear Regression with scikit-learn
-```python
-import numpy as np
-from sklearn.linear_model import LinearRegression
-X = np.array([[1], [2], [3], [4]])
-y = np.array([2, 4, 6, 8])
-model = LinearRegression().fit(X, y)
-print(model.predict([[5]]))  # Output: [10.]
-```
 
 ### Machine Learning Workflow
 1. Data Collection
@@ -49,6 +30,22 @@ print(model.predict([[5]]))  # Output: [10.]
 ### Deep Learning
 - Neural networks with multiple layers
 - Used for image, text, and speech tasks
+
+
+### LLM (Large Language Models)
+- Models like GPT-3, BERT, and T5
+- LLMs are trained with large datasets to understand and generate human-like text
+- Most of chatbots and AI assistants built on LLMs
+- LLMs can be used for tasks like translation, summarization, and question answering
+- Fine-tuning LLMs for specific tasks
+- LLM Examples: 
+   - Using OpenAI's GPT-3 for text generation
+   - Using Hugging Face's Transformers library for NLP tasks
+   - Using Google's BERT for sentiment analysis
+   - Using T5 for text summarization
+   - Using RAG (Retrieval-Augmented Generation) for question answering
+
+
 
 ---
 
