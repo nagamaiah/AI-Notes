@@ -1,5 +1,4 @@
-github codespaces
-# n8n-workflows
+# N8N-workflows Notes
 
 ---
 
@@ -17,17 +16,37 @@ github codespaces
 ---
 
 ## Introduction
-n8n is an open-source workflow automation tool that lets you connect apps, APIs, and services to automate tasks without writing code. It is highly extensible and can be self-hosted.
+- n8n is an open-source workflow automation tool that lets you connect apps, APIs, and services to automate tasks without writing code. 
+- It is highly extensible and can be self-hosted.
+- We can setup n8n using npm, Docker, or through cloud providers.
+- n8n supports over 350 integrations and allows for custom node creation.
+- It features a visual workflow editor that supports drag-and-drop functionality, making it easy to create and manage workflows.
+- n8n is designed for both technical and non-technical users, enabling them to automate complex tasks with ease.
 
 ---
 
 ## Key Features
 - Drag-and-drop workflow builder
+- Trigger-Based Automation (Webhooks, Cron jobs, Manual triggers)
+- Data Transformation (modify, map, and combine data between services)
+- Supports conditional branching and looping.
 - 350+ built-in integrations
 - Custom node creation
-- Conditional logic and branching
-- Webhook triggers
 - Self-hostable and scalable
+- Error Handling and Logging (Catch errors in workflows using Error Triggers).
+- Secure Credential Management 
+
+
+## Usages
+- CRM and email automation
+- Data synchronization between services
+- E-commerce order processing
+- Social media cross-posting
+- API-to-API integrations
+- Scheduled tasks and cron jobs
+- Custom notifications and alerts
+- Event-driven workflows (e.g., new user sign-up, form submissions)
+- Automated reporting and dashboards
 
 ---
 
@@ -43,8 +62,8 @@ n8n is an open-source workflow automation tool that lets you connect apps, APIs,
 ## Example Workflows
 - Data syncing between Google Sheets and Airtable
 - Automated email notifications
-- ETL pipelines for data processing
 - Social media posting automation
+- API to API data synchronization
 
 ### Example: Email to Slack
 1. Trigger: New email received
@@ -54,20 +73,33 @@ n8n is an open-source workflow automation tool that lets you connect apps, APIs,
 ---
 
 ## Integrations
-- Google Workspace
-- Slack
+- Google Products (Sheets, Drive, Calendar)
+- Microsoft Products (Excel, Outlook)
+- Social Media (Twitter, Facebook, Instagram)
+- Project Management (Trello, Asana, Jira)
+- Communication Tools (Slack, Discord, Microsoft Teams)
+- Payment Processors (Stripe, PayPal)
+- Marketing Tools (Mailchimp, SendGrid)
+- Cloud Services (AWS, Google Cloud, Azure)
+- IoT Devices (MQTT, Webhooks)
+- Custom APIs (HTTP Request node)
+- File Storage (Dropbox, Google Drive, S3)
+- Webhooks for real-time data processing
+- Email Services (Gmail, Outlook)
+- Web Scraping (using HTTP Request and HTML Extract nodes)
 - GitHub
-- AWS
 - Databases (MySQL, PostgreSQL, MongoDB)
-- Custom HTTP requests
 
 ---
 
 ## Best Practices
+- Secure Your Instance. Use HTTPS in production.
 - Use environment variables for secrets
+- Keep credentials, URLs, and configuration settings in env files (.env).
 - Modularize workflows for reuse
-- Monitor workflow runs and errors
+- Set Up Error Handling. Use Error Trigger or Try/Catch logic with IF nodes.
 - Use version control for workflow JSON
+- Optimize Loops and Pagination. Use SplitInBatches node when processing large datasets.
 
 ---
 
@@ -92,14 +124,35 @@ n8n is an open-source workflow automation tool that lets you connect apps, APIs,
 
 ---
 
-## FAQ
-**Q: Is n8n free?**
-A: Yes, n8n is open source with paid cloud options.
 
-**Q: Can I create custom integrations?**
-A: Yes, you can build custom nodes in JavaScript/TypeScript.
+## Setup N8N:
 
-**Q: How do I monitor workflows?**
-A: Use the built-in monitoring dashboard or external tools.
+1. Install Node LTS Version
+- sudo apt install curl gnupg -y
+- curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash -
+- sudo apt install nodejs -y
+- node -v
+- npm -v
 
----
+2. Install N8N
+- sudo npm install n8n -g
+
+3. Start n8n through command line
+- n8n
+
+4. Access n8n Editor UI
+- http://localhost:5678
+- http://192.168.1.135:5678
+
+5. Installed Directory:
+- /home/c2mtest/.n8n
+
+6. Generate .env varaibles
+- create .env file in /home/c2mtest/.n8n and add the following lines
+    - N8N_SECURE_COOKIE=false
+    - N8N_PROTOCOL=http
+7. After adding the above lines, run the below command
+- export $(cat ~/.n8n/.env | xargs)
+
+8. After that again run in terminal
+- n8n
