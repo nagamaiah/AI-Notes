@@ -128,31 +128,31 @@
 ## Setup N8N:
 
 1. Install Node LTS Version
-- sudo apt install curl gnupg -y
-- curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash -
-- sudo apt install nodejs -y
-- node -v
-- npm -v
+    - sudo apt install curl gnupg -y
+    - curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash -
+    - sudo apt install nodejs -y
+    - node -v
+    - npm -v
 
 2. Install N8N
-- sudo npm install n8n -g
+    - sudo npm install n8n -g
 
 3. Start n8n through command line
-- n8n
+    - n8n
 
 4. Access n8n Editor UI
-- http://localhost:5678
-- http://192.168.1.135:5678
+    - http://localhost:5678
+    - http://192.168.1.135:5678
 
 5. Installed Directory:
-- /home/c2mtest/.n8n
+    - /home/c2mtest/.n8n
 
 6. Generate .env varaibles
-- create .env file in /home/c2mtest/.n8n and add the following lines
-    - N8N_SECURE_COOKIE=false
-    - N8N_PROTOCOL=http
+    - create .env file in /home/c2mtest/.n8n and add the following lines
+        - N8N_SECURE_COOKIE=false
+        - N8N_PROTOCOL=http
 7. After adding the above lines, run the below command
-- export $(cat ~/.n8n/.env | xargs)
+    - export $(cat ~/.n8n/.env | xargs)
 
 8. After that again run in terminal
-- n8n
+    - n8n
