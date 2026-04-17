@@ -72,10 +72,13 @@ French:
 
 ---
 
-## Prompt Chaining
-- Break complex tasks into multiple steps
-- Chain outputs from one prompt as input to the next
-- Use chain-of-thought for complex reasoning tasks
+## Advanced Techniques
+- **Chain-of-Thought (CoT):** Encourage step-by-step reasoning
+- **Tree-of-Thought:** Explore multiple reasoning paths
+- **Self-Consistency:** Generate multiple responses and select the most consistent
+- **Prompt Tuning:** Fine-tune prompts for specific tasks
+- **Meta-Prompting:** Use prompts to generate better prompts
+- **Multimodal Prompting:** Include images or other modalities
 
 ---
 

@@ -22,12 +22,16 @@ GitHub Codespaces is a cloud-based development environment that lets you code di
 ---
 
 ## Key Features
-- Pre-configured dev environments
+- Pre-configured dev environments with dev containers
 - Integrated with GitHub repositories
-- Customizable with devcontainer.json
-- Supports VS Code extensions
+- Customizable with devcontainer.json and features
+- Supports VS Code extensions and settings
+- Prebuilds for faster codespace creation
 - Shareable with your team
-- Scalable compute options
+- Scalable compute options (change machine types)
+- Access to private registries and other repositories
+- Automatic file opening in codespaces
+- Beta host image option for latest updates
 
 ---
 
@@ -42,16 +46,27 @@ GitHub Codespaces is a cloud-based development environment that lets you code di
 
 ## Customizing Your Codespace
 - Use a `.devcontainer/devcontainer.json` file to specify environment settings
+- Add features to quickly include tools, runtimes, or libraries
 - Install extensions, set up tools, and configure ports
+- Allow access to private registries or other repositories
+- Set files to open automatically in the codespace
+- Change machine type for appropriate resources
+- Choose stable or beta host image
 - Example:
 ```json
 {
   "name": "My Project",
   "image": "mcr.microsoft.com/vscode/devcontainers/python:3.10",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+  },
   "settings": { "terminal.integrated.shell.linux": "/bin/bash" },
   "extensions": ["ms-python.python", "ms-toolsai.jupyter"]
 }
 ```
+
+## Prebuilds
+Prebuilds speed up codespace creation for large repositories by pre-building the environment. Configure prebuilds in repository settings to allow access to other repositories if needed.
 
 ---
 

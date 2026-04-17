@@ -17,26 +17,36 @@
 ---
 
 ## Introduction
-Anthropic Claude is a large language model (LLM) designed for safe, helpful, and honest AI interactions. It is built by Anthropic, a company focused on AI safety and alignment.
+Anthropic Claude is a family of large language models (LLMs) designed for safe, helpful, and honest AI interactions. Built by Anthropic, Claude excels at tasks involving language, reasoning, analysis, coding, and more. The latest generation includes Claude Opus 4.6 (most intelligent), Claude Sonnet 4.6 (versatile), and Claude Haiku 4.5 (fastest).
 
 ---
 
 ## Key Features
-- Natural language understanding and generation
-- Multi-turn conversation
-- Context retention
-- Focus on safety and ethical use
+- Advanced natural language understanding and generation
+- Multi-turn conversations with context retention
+- Extended thinking for complex reasoning
+- Web search and file handling capabilities
+- Structured outputs and tool use
+- Import memory from other AI providers
+- Claude Cowork: Delegate tasks and automate workflows
+- Claude Code: AI-powered coding assistant
+- Integrations with Chrome, Slack, Excel, PowerPoint, Word
+- Focus on safety, ethics, and alignment
 - API access for developers
 
 ---
 
 ## Model Capabilities
-- Text summarization
-- Question answering
-- Code generation
-- Creative writing
-- Data extraction
-- Reasoning and logic
+- Text summarization and analysis
+- Question answering and research
+- Code generation, debugging, and explanation
+- Creative writing and content creation
+- Data extraction and processing
+- Reasoning, logic, and problem-solving
+- Vision: Process and analyze images
+- Extended thinking for deep analysis
+- Web search integration
+- File handling and organization
 
 ### Example: Summarization
 ```
@@ -58,18 +68,23 @@ Claude is trained with a set of principles (a "constitution") to ensure ethical 
 ---
 
 ## API Usage
-Developers can access Claude via API for integration into apps and workflows.
+Developers can access Claude via API for integration into apps and workflows. Use the Messages API for conversations.
 
 ### Example: Python API Call
 ```python
 import anthropic
-client = anthropic.Client(api_key="YOUR_API_KEY")
-response = client.completions.create(
-    model="claude-3-opus-20240229",
-    prompt="Hello, Claude!",
-    max_tokens=100
+
+client = anthropic.Anthropic(api_key="YOUR_API_KEY")
+
+response = client.messages.create(
+    model="claude-3-5-sonnet-20241022",  # Or latest: claude-sonnet-4-6
+    max_tokens=100,
+    messages=[
+        {"role": "user", "content": "Hello, Claude!"}
+    ]
 )
-print(response.completion)
+
+print(response.content[0].text)
 ```
 
 ---
@@ -78,8 +93,31 @@ print(response.completion)
 - Customer support chatbots
 - Content generation (blogs, emails)
 - Research assistants
-- Data analysis
+- Data analysis and visualization
 - Educational tools
+- Code development and debugging
+- Workflow automation with Cowork
+- Document processing and organization
+
+## Claude Cowork
+Claude Cowork allows you to delegate tasks to Claude, who can work with your local files and cloud-based apps to organize folders, build spreadsheets, prepare reports, and more. Describe the outcome, and Claude handles the steps with your approval.
+
+### Example: Organize Downloads Folder
+```
+Prompt: Help me organize my Downloads folder. Scan the contents and propose a plan: categories/folders to create, how files should be sorted, naming conventions, files to flag for review.
+```
+
+## Claude Code
+Claude Code is an AI-powered coding assistant that helps with writing, debugging, and modernizing code. It integrates with your development environment for seamless coding support.
+
+## Integrations
+- Claude for Chrome: Web browsing assistant
+- Claude for Slack: Team collaboration
+- Claude for Excel/PowerPoint/Word: Productivity tools
+- Claude for various platforms via API
+
+## Extended Thinking and Tools
+Claude supports extended thinking for complex reasoning, web search for real-time information, file handling, and structured outputs for consistent results.
 
 ---
 
@@ -113,9 +151,13 @@ You are a helpful assistant. Please answer concisely.
 ---
 
 ## Further Reading
-- [Anthropic Claude API](https://www.anthropic.com/product)
+- [Claude Product Overview](https://claude.com/product/overview)
+- [Claude API Documentation](https://platform.claude.com/docs)
 - [Anthropic Research](https://www.anthropic.com/research)
-- [Constitutional AI Paper](https://www.anthropic.com/constitutional)
+- [Claude Blog](https://claude.com/blog)
+- [Model Details: Opus](https://www.anthropic.com/claude/opus)
+- [Model Details: Sonnet](https://www.anthropic.com/claude/sonnet)
+- [Model Details: Haiku](https://www.anthropic.com/claude/haiku)
 
 ---
 

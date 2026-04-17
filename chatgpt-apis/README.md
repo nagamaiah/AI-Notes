@@ -17,15 +17,17 @@
 ---
 
 ## Introduction
-OpenAI's ChatGPT APIs allow developers to integrate powerful language models into their applications for text, code, and image generation, chatbots, summarization, and more.
+OpenAI's ChatGPT APIs allow developers to integrate powerful language models into their applications for text, code, image, and video generation, chatbots, summarization, agent building, and more. The latest models include GPT-5, GPT-5.3 Instant, and GPT-5.3-Codex.
 
 ---
 
 ## API Overview
-- RESTful API
-- Supports multiple models (GPT-3.5, GPT-4, etc.)
-- JSON-based requests and responses
-- Supports streaming responses
+- RESTful API with JSON requests/responses
+- Supports multiple frontier models (GPT-5 series, GPT-4o, etc.)
+- Multimodal capabilities (text, image, voice, video)
+- Streaming responses for real-time interactions
+- Agent platform for building autonomous agents
+- Realtime API for voice-enabled applications
 
 ---
 
@@ -40,36 +42,47 @@ openai.api_key = 'YOUR_API_KEY'
 ---
 
 ## Endpoints
-- `/v1/chat/completions`: Chat-based interactions
+- `/v1/chat/completions`: Chat-based interactions with latest models
 - `/v1/completions`: Text completion
 - `/v1/edits`: Text editing
 - `/v1/embeddings`: Vector representations
 - `/v1/images/generations`: Image generation (DALL·E)
+- `/v1/images/edits`: Image editing
+- `/v1/images/variations`: Image variations
+- `/v1/audio/transcriptions`: Audio transcription
+- `/v1/audio/translations`: Audio translation
+- `/v1/audio/speech`: Text-to-speech
+- `/v1/realtime`: Realtime voice interactions
+- Agent Platform endpoints for building and deploying agents
 
 ---
 
 ## Example Usage
 ### Chat Completion (Python)
 ```python
-import openai
-openai.api_key = 'YOUR_API_KEY'
-response = openai.ChatCompletion.create(
-    model="gpt-4",
+from openai import OpenAI
+
+client = OpenAI(api_key='YOUR_API_KEY')
+
+response = client.chat.completions.create(
+    model="gpt-5",
     messages=[{"role": "user", "content": "Hello!"}]
 )
-print(response.choices[0].message['content'])
+
+print(response.choices[0].message.content)
 ```
 
 ### Node.js Example
 ```js
-const { Configuration, OpenAIApi } = require("openai");
-const configuration = new Configuration({ apiKey: "YOUR_API_KEY" });
-const openai = new OpenAIApi(configuration);
-const response = await openai.createChatCompletion({
-  model: "gpt-4",
-  messages: [{ role: "user", content: "Hello!" }],
+const OpenAI = require('openai');
+const openai = new OpenAI({ apiKey: 'YOUR_API_KEY' });
+
+const response = await openai.chat.completions.create({
+  model: 'gpt-5',
+  messages: [{ role: 'user', content: 'Hello!' }],
 });
-console.log(response.data.choices[0].message.content);
+
+console.log(response.choices[0].message.content);
 ```
 
 ---
@@ -79,6 +92,20 @@ console.log(response.data.choices[0].message.content);
 - **System Prompts:** Guide model behavior
 - **Streaming:** Receive tokens as they are generated
 - **Temperature & Top_p:** Control randomness and diversity
+- **Vision:** Process images and generate text from visual input
+- **Voice:** Realtime API for voice interactions
+- **Agent Platform:** Build, deploy, and optimize autonomous agents
+- **Multimodal:** Handle text, image, audio, and video
+- **Fine-tuning:** Customize models for specific tasks
+
+## Agent Platform
+OpenAI's Agent Platform allows building production-ready agents with visual or code-first approaches. Includes Agent Builder, Agents SDK, ChatKit for front-end experiences, and evaluation tools for optimization.
+
+## Realtime API
+The Realtime API enables natural-sounding voice agents for rich customer experiences. Supports real-time audio input/output, function calling, and conversation management.
+
+## Sora
+Sora is OpenAI's text-to-video model for generating high-quality videos from text prompts.
 
 ---
 
@@ -106,9 +133,13 @@ console.log(response.data.choices[0].message.content);
 ---
 
 ## Further Reading
-- [OpenAI API Docs](https://platform.openai.com/docs)
-- [OpenAI Cookbook](https://github.com/openai/openai-cookbook)
-- [Awesome ChatGPT Prompts](https://github.com/f/awesome-chatgpt-prompts)
+- [OpenAI Platform Documentation](https://platform.openai.com/docs)
+- [API Reference](https://developers.openai.com/api/docs)
+- [Agent Platform](https://openai.com/agent-platform/)
+- [Realtime API Guide](https://platform.openai.com/docs/guides/realtime)
+- [Sora Overview](https://openai.com/sora/)
+- [Cookbook Examples](https://cookbook.openai.com/)
+- [OpenAI Blog](https://openai.com/blog/)
 
 ---
 

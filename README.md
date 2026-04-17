@@ -9,4 +9,5 @@
 - MCP
 - n8n-workflows
 - prompt-engineering
+- RAG
 - vibe-coding
